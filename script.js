@@ -3,7 +3,7 @@ window.promises = [];
 // Do not change the code above this
 // add your promises to the array `promises`
 function promiseFactory() {
-	const time = Math.floor(Math.random() * 5) + min;
+	const time = Math.floor(Math.random() * 5) + 1;
 	return new Promise((resolve, reject) => {
 		setTimeout(() => {
 			resolve(`I got resolved after ${time} seconds`);
