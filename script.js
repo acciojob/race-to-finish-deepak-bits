@@ -5,11 +5,13 @@ window.promises = [];
 function promiseFactory() {
 	const time = Math.floor(Math.random() * 5) + min;
 	return new Promise((resolve, reject) => {
-		resolve(`I got resolved after ${time} seconds`);
-	}, time * 1000);
+		setTimeout(() => {
+			resolve(`I got resolved after ${time} seconds`);
+		}, time * 1000);	
+	});
 }
 
-for(let i = 0; i < n; i++) {
+for(let i = 0; i < 5; i++) {
 	promises.push(promiseFactory());
 }
 
